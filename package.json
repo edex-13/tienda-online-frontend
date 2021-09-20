@@ -1,0 +1,26 @@
+{
+  "name": "tienda-online-frontend",
+  "version": "1.0.0",
+  "description": "Este es el frontend de una pequeña tienda online donde podrás comprar productos deportivos. Este proyecto esta desarrollado en JavaScript vanilla",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edex-13/tienda-online-frontend.git"
+  },
+  "keywords": [
+    "frontend",
+    "JavaScript",
+    "sass",
+    "html",
+    "webpack"
+  ],
+  "author": "Ederson Felipe López Bolívar <ederson12f@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edex-13/tienda-online-frontend/issues"
+  },
+  "homepage": "https://github.com/edex-13/tienda-online-frontend#readme"
+}
