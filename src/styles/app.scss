@@ -1,3 +1,18 @@
+@import './variables.scss';
+@import './sections/header.scss';
+@import './components/btn.scss';
+@import './components/input.scss';
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: $fontFamily;
+}
 body{
-  background-color: red;
+	background-color: $colorWhite;
+}
+.wrapper {
+	max-width: 1158px;
+	padding: 0px 15px;
+  margin: auto;
 }
