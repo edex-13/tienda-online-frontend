@@ -1,7 +1,8 @@
 .header {
 	position: sticky;
 	top: 0;
-	background-color: #fefefe;
+	background-color: $colorWhiteDOS;
+	z-index: 100;
 }
 .header__container {
 	width: 100%;

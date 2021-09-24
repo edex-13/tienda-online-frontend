@@ -1,7 +1,10 @@
 @import './variables.scss';
 @import './sections/header.scss';
 @import './sections/footer.scss';
+@import './sections/main.scss';
 @import './components/btn.scss';
+@import './components/parallax.scss';
+
 @import './components/input.scss';
 * {
 	box-sizing: border-box;
