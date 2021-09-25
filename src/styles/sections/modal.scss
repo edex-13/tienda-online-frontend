@@ -95,8 +95,8 @@ body.no-scroll {
 			align-items: center;
 			border-radius: 10px;
 			box-shadow: rgb(0 0 0 / 10%) 0px 11px 29px 0px;
-			min-width: 160px;
-			height: 35px;
+			min-width: 170px;
+			height: 40px;
 			overflow: hidden;
 			button {
 				width: 100%;
@@ -156,9 +156,10 @@ body.no-scroll {
 				height: 60px;
 			}
 			.modal-body {
-				background-color: transparent;
+				background-color: red;
 				box-shadow: none;
 				border-radius: 0px;
+				height: calc(100% - 180px);
 				.modal-item {
 					padding: 25px 5px;
 					.modal-item-info {
@@ -192,7 +193,8 @@ body.no-scroll {
 	.modal {
 		.modal-content {
 			.modal-body {
-				height: calc(100% - 175px);
+				height: calc(100% - 190px);
+					background-color:blue;
 				.modal-item {
 					padding: 20px 5px;
 					.modal-item-info {
