@@ -24,3 +24,17 @@
 		width: 40%;
 	}
 }
+@media screen and (max-width: 768px) {
+	.header__container {
+		.section-r{
+			width: 55%;
+		}
+	}
+}
+@media screen and (max-width: 620px) {
+	.header__container {
+		.section-r{
+			width: 62%;
+		}
+	}
+}

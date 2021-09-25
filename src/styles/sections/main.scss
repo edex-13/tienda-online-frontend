@@ -66,3 +66,42 @@
 		opacity: 1;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.main__container {
+	padding: 60px 0px 30px 0px;
+	}
+	.main-welcome {
+		height: 300px;
+		gap: 25px;
+		grid-template-columns: 1fr 1fr;
+		.section-l {
+			.title-main {
+				font-size: 35px;
+			}
+		}
+		.section-r {
+			.Info {
+				padding: 10px;
+				bottom: 20px;
+				font-size: 26px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 620px) {
+	.main-welcome {
+		.section-l {
+			.title-main {
+				font-size: 30px;
+			}
+		}
+		.section-r {
+			.Info {
+				padding: 10px;
+				bottom: 20px;
+				font-size: 20px;
+			}
+		}
+	}
+}
