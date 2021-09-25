@@ -11,7 +11,6 @@
 	align-items: center;
 	justify-content: space-between;
 
-
 	.title-header {
 		font-size: 1.5rem;
 		font-weight: 800;
@@ -26,15 +25,23 @@
 }
 @media screen and (max-width: 768px) {
 	.header__container {
-		.section-r{
+		.section-r {
 			width: 55%;
 		}
 	}
 }
 @media screen and (max-width: 620px) {
 	.header__container {
-		.section-r{
+		.section-r {
 			width: 62%;
+		}
+	}
+}
+@media screen and (max-width: 570px) {
+	.header__container {
+		.section-r {
+			justify-content: end;
+			width: auto;
 		}
 	}
 }

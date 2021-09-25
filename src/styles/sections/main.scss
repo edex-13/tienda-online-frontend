@@ -54,7 +54,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	height: 120px;
+	gap: 20px;
 }
 @keyframes main-content {
 	0% {
@@ -103,5 +103,29 @@
 				font-size: 20px;
 			}
 		}
+	}
+}
+@media screen and (max-width: 570px) {
+	.main-welcome {
+		grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    height: 500px;
+		.section-l {
+			.title-main {
+				font-size: 35px;
+			}
+		}
+		.section-r {
+			.Info {
+				padding: 15px;
+				bottom: 30px;
+				font-size: 20px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 425px) {
+	.main__container{
+		padding: 20px 0px;
 	}
 }
