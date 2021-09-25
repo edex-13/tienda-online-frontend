@@ -38,7 +38,7 @@ body.no-scroll {
 	height: 80px;
 	.title-modal {
 		font-size: 26px;
-		font-weight: 100;
+		font-weight: 400;
 		color: $colorOne;
 	}
 	.close_btn {
@@ -57,7 +57,7 @@ body.no-scroll {
 }
 
 .modal-body {
-	height: calc(100% - 150px);
+	height: calc(100% - 165px);
 	min-height: 300px;
 	overflow-y: auto;
 	background-color: $colorWhiteDOS;
@@ -82,8 +82,10 @@ body.no-scroll {
 				height: 50px;
 			}
 			.modal-item-info-text {
+				font-size: 18px;
 				.price {
 					font-weight: bold;
+					font-size: 16px;
 				}
 			}
 		}
@@ -93,7 +95,7 @@ body.no-scroll {
 			align-items: center;
 			border-radius: 10px;
 			box-shadow: rgb(0 0 0 / 10%) 0px 11px 29px 0px;
-			min-width: 140px;
+			min-width: 160px;
 			height: 35px;
 			overflow: hidden;
 			button {
@@ -158,27 +160,49 @@ body.no-scroll {
 				box-shadow: none;
 				border-radius: 0px;
 				.modal-item {
-					padding: 20px 5px;
+					padding: 25px 5px;
 					.modal-item-info {
-						gap: 10px;
+						gap: 20px;
+					}
+					.modal-item-info {
+						.modal-item-info-text {
+							font-size: 16px;
+							.price {
+								font-weight: bold;
+								font-size: 16px;
+							}
+						}
 					}
 				}
 			}
-			.modal-footer{
+			.modal-footer {
 				padding: 8px 15px;
 			}
 		}
 	}
 }
 @media screen and (max-width: 375px) {
-	.modal-body {
-		height: calc(100% - 170px);
-	}
 	.modal-footer {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		flex-direction: column;
 		height: 90px;
+	}
+	.modal {
+		.modal-content {
+			.modal-body {
+				height: calc(100% - 175px);
+				.modal-item {
+					padding: 20px 5px;
+					.modal-item-info {
+						gap: 10px;
+					}
+					.modal-item-quantity {
+						min-width: 140px;
+					}
+				}
+			}
+		}
 	}
 }
