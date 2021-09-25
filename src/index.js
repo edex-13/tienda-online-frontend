@@ -1,2 +1,2 @@
-import './styles/app.scss';
-import './utils/modal'
+import 'styles/app.scss';
+import 'actions/openModal'
