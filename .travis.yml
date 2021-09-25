@@ -4,7 +4,7 @@ cache:
     - node_modules
     - ~/np,
 node_js:
-  -14
+  - stable
 git:
   depth: 3
 script:
