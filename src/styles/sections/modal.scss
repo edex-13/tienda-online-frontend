@@ -1,0 +1,124 @@
+.modal.active {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: block;
+}
+body.active-modal {
+	overflow: hidden;
+}
+.modal {
+	display: none;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 120;
+	.modal-content {
+		position: absolute;
+		right: 0;
+		width: 35%;
+		height: inherit;
+		background: $colorWhite;
+		padding: 0px 20px 0px 20px;
+	}
+	::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+	::-webkit-scrollbar-track {
+		background-color: rgba($colorOne, 0.1);
+	}
+	::-webkit-scrollbar-thumb {
+		background: rgba($colorOne, 0.7);
+		border-radius: 10px;
+	}
+}
+.modal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	.title-modal {
+		font-size: 26px;
+		font-weight: 100;
+		color: $colorOne;
+	}
+	.close_btn {
+		width: 30px;
+		height: 30px;
+		background-image: url(~images/close.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		background-color: $colorWhite;
+		border: 1px solid $colorOne;
+		&:hover {
+			background-color: rgba($colorOne, 0.1);
+		}
+	}
+}
+
+.modal-body {
+	height: calc(100% - 150px);
+	min-height: 300px;
+	overflow-y: auto;
+	background-color: $colorWhiteDOS;
+	border-radius: 10px;
+	box-shadow: rgb(0 0 0 / 10%) 0px 11px 29px 0px;
+	.modal-item {
+		display: flex;
+		box-sizing: content-box;
+		align-items: center;
+		justify-content: space-between;
+		box-shadow: rgb(0 0 0 / 5%) 0px -1px 0px 0px inset;
+		padding: 20px 10px;
+		height: 64px;
+		.modal-item-info {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			color: $colorOne;
+			gap: 20px;
+			img {
+				width: 50px;
+				height: 50px;
+			}
+			.modal-item-info-text {
+				.price {
+					font-weight: bold;
+				}
+			}
+		}
+		.modal-item-quantity {
+			box-sizing: content-box;
+			display: flex;
+			align-items: center;
+			border-radius: 10px;
+			box-shadow: rgb(0 0 0 / 10%) 0px 11px 29px 0px;
+			height: 35px;
+			overflow: hidden;
+			button {
+				width: 30px;
+				height: inherit;
+				border: none;
+				background-color: transparent;
+				img {
+					width: 20px;
+				}
+				&:active {
+					background-color: rgba($colorOne, 0.1);
+				}
+			}
+			p {
+				font-size: 18px;
+				margin: 0px 10px;
+				color: $colorOne;
+			}
+		}
+	}
+}
+.modal-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 70px;
+}
+
