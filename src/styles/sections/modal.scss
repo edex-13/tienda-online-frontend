@@ -93,10 +93,11 @@ body.no-scroll {
 			align-items: center;
 			border-radius: 10px;
 			box-shadow: rgb(0 0 0 / 10%) 0px 11px 29px 0px;
+			min-width: 140px;
 			height: 35px;
 			overflow: hidden;
 			button {
-				width: 30px;
+				width: 100%;
 				height: inherit;
 				border: none;
 				background-color: transparent;
@@ -109,8 +110,13 @@ body.no-scroll {
 			}
 			p {
 				font-size: 18px;
-				margin: 0px 10px;
 				color: $colorOne;
+				display: flex;
+				width: 100%;
+				min-width: 50px;
+				max-width: 75px;
+				align-items: center;
+				justify-content: center;
 			}
 		}
 	}
@@ -122,3 +128,57 @@ body.no-scroll {
 	height: 70px;
 }
 
+// Media Queries
+@media screen and (max-width: 1024px) {
+	.modal {
+		.modal-content {
+			width: 45%;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.modal {
+		.modal-content {
+			width: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.modal {
+		.modal-content {
+			width: 100%;
+			padding: 0px;
+			.modal-header {
+				padding: 5px 5px;
+				height: 60px;
+			}
+			.modal-body {
+				background-color: transparent;
+				box-shadow: none;
+				border-radius: 0px;
+				.modal-item {
+					padding: 20px 5px;
+					.modal-item-info {
+						gap: 10px;
+					}
+				}
+			}
+			.modal-footer{
+				padding: 8px 15px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 375px) {
+	.modal-body {
+		height: calc(100% - 170px);
+	}
+	.modal-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 90px;
+	}
+}
