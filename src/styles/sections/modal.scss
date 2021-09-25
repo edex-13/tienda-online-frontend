@@ -156,10 +156,9 @@ body.no-scroll {
 				height: 60px;
 			}
 			.modal-body {
-				background-color: red;
 				box-shadow: none;
 				border-radius: 0px;
-				height: calc(100% - 180px);
+				height: calc(100% - 200px);
 				.modal-item {
 					padding: 25px 5px;
 					.modal-item-info {
@@ -194,7 +193,6 @@ body.no-scroll {
 		.modal-content {
 			.modal-body {
 				height: calc(100% - 190px);
-					background-color:blue;
 				.modal-item {
 					padding: 20px 5px;
 					.modal-item-info {
