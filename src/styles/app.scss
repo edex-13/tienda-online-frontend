@@ -1,0 +1,23 @@
+@import './variables.scss';
+@import './sections/header.scss';
+@import './sections/footer.scss';
+@import './sections/main.scss';
+@import './sections/modal.scss';
+
+@import './components/btn.scss';
+@import './components/parallax.scss';
+
+@import './components/input.scss';
+* {
+	margin: 0;
+	padding: 0;
+	font-family: $fontFamily;
+}
+body{
+	background-color: $colorWhite;
+}
+.wrapper {
+	max-width: 1158px;
+	padding: 0px 15px;
+  margin: auto;
+}

@@ -1,0 +1,14 @@
+.input-container{
+  display: flex;
+  input{
+    padding: 0 10px;
+    background-color: $colorWhite;
+    border: none;
+    font-size: 16px;
+  }
+  input:focus-visible{
+    outline: none !important;
+    border: 2px solid $colorOne;
+    border-radius: 3px;
+  }
+}

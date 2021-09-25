@@ -1,0 +1,40 @@
+.cards-products {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 40px;
+	.card-product {
+		background-color: $colorWhiteDOS;
+		border-radius: 10px;
+		padding: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		img {
+			width: 60%;
+			margin-bottom: 25px;
+		}
+		.container-product-info {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 5px;
+			margin-bottom: 22px;
+      color: $colorOne;
+      .card-product__price{
+        color:$colorDarkPink;
+      }
+		}
+		.card-product__info {
+			display: block;
+			padding: 10px;
+		}
+		.card-product__description {
+			padding: 0 5px;
+		}
+		.btn {
+			margin-top: 23px;
+      font-size: 17px;
+		}
+	}
+}
