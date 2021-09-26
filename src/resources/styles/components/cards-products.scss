@@ -8,7 +8,6 @@
 		padding: 5px;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
 		align-items: center;
 		img {
 			width: 60%;
@@ -26,8 +25,11 @@
       }
 		}
 		.card-product__info {
-			display: block;
+			height: 100%;
 			padding: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 		}
 		.card-product__description {
 			padding: 0 5px;
