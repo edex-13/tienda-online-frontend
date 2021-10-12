@@ -1,20 +1,41 @@
-const increaseQuantity = (idProduct , product)=>{
-  product.amount +=  1
-	localStorage.setItem(idProduct, JSON.stringify(product));
+const saveProduct = (data) => localStorage.setItem('PRODUCTS', JSON.stringify(data));
+
+const getCollection = (collection) => localStorage.getItem(collection)
+
+const getProduct = (id) => {
+	const products = JSON.parse(getCollection('PRODUCTS'))
+	return products.find(product => product.idProduct == id)
+	// console.log(products.indexOf(a))
 }
 
-const saveProduct = (product) => {
+const increaseQuantity = (id) => {
+	const products = JSON.parse(getCollection('PRODUCTS'))
+	products.map(product => {
+		if (product.idProduct == id) {
+			product.amount += 1;
+		}
+	})
+	return products;
+}
+
+
+export default (product) => {
 	const data = {
 		...product,
 		amount: 1,
 	};
-
-  const getProduct = ()=> localStorage.getItem(product.idProduct)
-	if (getProduct()) {
-		const dataProduct = JSON.parse(getProduct());
-    increaseQuantity(product.idProduct, dataProduct )
-	} else {
-		localStorage.setItem(product.idProduct, JSON.stringify(data));
+	const collectionExists = JSON.parse(getCollection('PRODUCTS'))
+	if (collectionExists) {
+		const productExists = getProduct(product.idProduct)
+		if (productExists) {
+			saveProduct(increaseQuantity(product.idProduct))
+		} else {
+			const collection = JSON.parse(getCollection('PRODUCTS'))
+			collection.push(data)
+			saveProduct(collection)
+		}
+	}
+	else {
+		saveProduct([data]);
 	}
 };
-export default saveProduct;
