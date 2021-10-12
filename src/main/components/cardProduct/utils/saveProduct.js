@@ -1,23 +1,4 @@
-const saveProduct = (data) => localStorage.setItem('PRODUCTS', JSON.stringify(data));
-
-const getCollection = (collection) => localStorage.getItem(collection)
-
-const getProduct = (id) => {
-	const products = JSON.parse(getCollection('PRODUCTS'))
-	return products.find(product => product.idProduct == id)
-	// console.log(products.indexOf(a))
-}
-
-const increaseQuantity = (id) => {
-	const products = JSON.parse(getCollection('PRODUCTS'))
-	products.map(product => {
-		if (product.idProduct == id) {
-			product.amount += 1;
-		}
-	})
-	return products;
-}
-
+import { getProduct, getCollection, saveProduct, increaseQuantity } from 'data/localStorage';
 
 export default (product) => {
 	const data = {
