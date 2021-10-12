@@ -18,7 +18,6 @@ $cardsProducts.addEventListener('click', ({target}) => {
       titleProduct,
       descriptionProduct,
       priceProduct,
-
     }
     saveProduct_Localstorage(product)
 	}
