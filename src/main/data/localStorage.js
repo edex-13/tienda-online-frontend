@@ -1,5 +1,11 @@
 const getCollection = (collection) => localStorage.getItem(collection)
-const deletCollection = (collection)=>localStorage.removeItem(collection)
+const deletCollection = (collection)=>{
+	if(getCollection(collection)){
+		localStorage.removeItem(collection)
+	}else{
+		alert('Error')
+	}
+}
 
 const saveProduct = (data) => localStorage.setItem('PRODUCTS', JSON.stringify(data));
 
@@ -9,22 +15,30 @@ const getProduct = (id) => {
 }
 
 const increaseQuantity = (id) => {
-	const products = JSON.parse(getCollection('PRODUCTS'))
-	products.map(product => {
-		if (product.idProduct == id) {
-			product.amount += 1;
-		}
-	})
-	return products;
+	if(getProduct(id)){
+		const products = JSON.parse(getCollection('PRODUCTS'))
+		products.map(product => {
+			if (product.idProduct == id) {
+				product.amount += 1;
+			}
+		})
+		saveProduct( products);
+	}else{
+		alert('Error')
+	}
 }
 const decreaseQuantity = (id) => {
-	const products = JSON.parse(getCollection('PRODUCTS'))
-	products.map(product => {
-		if (product.idProduct == id) {
-			product.amount == 0 ? 0 : product.amount - 1;
-		}
-	})
-	return products;
+	if(getProduct(id)){
+		const products = JSON.parse(getCollection('PRODUCTS'))
+		products.map(product => {
+			if (product.idProduct == id) {
+				product.amount == 0 ? 0 : product.amount - 1;
+			}
+		})
+		saveProduct( products);
+	}else{
+		alert('Error')
+	}
 }
 
 
