@@ -1,4 +1,4 @@
-import { getProduct, getCollection, saveProduct, increaseQuantity } from 'data/localStorage';
+import { getProduct, getCollection, saveProduct, increaseQuantity ,addProduct} from 'data/localStorage';
 
 export default (product) => {
 	const data = {
@@ -11,9 +11,7 @@ export default (product) => {
 		if (productExists) {
 			increaseQuantity(product.idProduct)
 		} else {
-			const collection = JSON.parse(getCollection('PRODUCTS'))
-			collection.push(data)
-			saveProduct(collection)
+			addProduct(data)
 		}
 	}
 	else {
