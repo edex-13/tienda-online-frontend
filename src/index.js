@@ -1,6 +1,9 @@
 import 'styles/app.scss';
 import 'actions/openModal';
 import 'components/cardProduct/utils/addToCart';
+
+import 'components/shoppinCart/index';
+
 import CardProduct from 'components/cardProduct/CardProduct';
 
 const dsjd = document.querySelector('#cards-products');
