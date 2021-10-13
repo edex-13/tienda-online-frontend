@@ -1,25 +1,25 @@
 import imagesMinus from 'images/minus.svg';
 import imagesPlus from 'images/plus.svg';
 const ItemProduct = (product) => {
-	const { id, title, routeImage, price, amount } = product;
+	const { idProduct, titleProduct, imageProduct, priceProduct, amount } = product;
 
 	const $itemProduct = document.createElement('div');
 	$itemProduct.classList.add('modal-item');
-	$itemProduct.id = id;
+	$itemProduct.id = idProduct;
 
 	const $itemProduct_info = document.createElement('div');
 	$itemProduct_info.classList.add('modal-item-info');
 
 	const $imageProduct = document.createElement('img');
-	$imageProduct.src = routeImage;
-	$imageProduct.alt = title;
-	$imageProduct.title = title;
+	$imageProduct.src = imageProduct;
+	$imageProduct.alt = titleProduct;
+	$imageProduct.title = titleProduct;
 
 	const $itemProduct_infoText = document.createElement('div');
 	$itemProduct_infoText.classList.add('modal-item-info-text');
 
 	const $titleProduct = document.createElement('p');
-	$titleProduct.textContent = title;
+	$titleProduct.textContent = titleProduct;
 
 	const $priceProductContent = document.createElement('p');
 	$priceProductContent.classList.add('price')
@@ -27,7 +27,7 @@ const ItemProduct = (product) => {
 
 	const $priceProduct = document.createElement('span');
 	$priceProduct.classList.add('price_value')
-	$priceProduct.textContent = price;
+	$priceProduct.textContent = priceProduct;
 
 
 
