@@ -9,7 +9,7 @@ export default (product) => {
 	if (collectionExists) {
 		const productExists = getProduct(product.idProduct)
 		if (productExists) {
-			saveProduct(increaseQuantity(product.idProduct))
+			increaseQuantity(product.idProduct)
 		} else {
 			const collection = JSON.parse(getCollection('PRODUCTS'))
 			collection.push(data)
