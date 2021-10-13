@@ -9,6 +9,12 @@ const deletCollection = (collection)=>{
 
 const saveProduct = (data) => localStorage.setItem('PRODUCTS', JSON.stringify(data));
 
+const addProduct = (product)=>{
+	const collection = JSON.parse(getCollection('PRODUCTS'))
+	collection.push(product)
+	saveProduct(collection)
+}
+
 const getProduct = (id) => {
 	const products = JSON.parse(getCollection('PRODUCTS'))
 	return products.find(product => product.idProduct == id)
@@ -48,5 +54,6 @@ export  {
   getProduct,
   saveProduct,
   increaseQuantity,
-  decreaseQuantity
+  decreaseQuantity,
+	addProduct
 }
