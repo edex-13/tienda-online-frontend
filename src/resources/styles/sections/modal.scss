@@ -103,12 +103,17 @@ body.no-scroll {
 				height: inherit;
 				border: none;
 				background-color: transparent;
-				img {
-					width: 20px;
-				}
+				background-position: center;
+				background-repeat: no-repeat;
 				&:active {
 					background-color: rgba($colorOne, 0.1);
 				}
+			}
+			button.plus{
+				background-image: url(~images/plus.svg);
+			}
+			button.minus{
+				background-image: url(~images/minus.svg);
 			}
 			p {
 				font-size: 18px;
