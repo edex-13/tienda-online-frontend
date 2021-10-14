@@ -47,7 +47,18 @@ const decreaseQuantity = (id) => {
 	}
 }
 
+const updatePriceOfAProduct=(id)=>{
+	if(getProduct(id)){
+		const products = JSON.parse(getCollection('PRODUCTS'))
+		products.map(product => {
+			if (product.idProduct == id) {
+				product.priceTotal = product.amount * product.priceProduct;
+			}
+		})
+		saveProduct( products);
+	}
 
+}
 export  {
   getCollection,
   deletCollection,
@@ -55,5 +66,6 @@ export  {
   saveProduct,
   increaseQuantity,
   decreaseQuantity,
-	addProduct
+	addProduct,
+	updatePriceOfAProduct
 }

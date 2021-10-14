@@ -1,7 +1,7 @@
 import imagesMinus from 'images/minus.svg';
 import imagesPlus from 'images/plus.svg';
 const ItemProduct = (product) => {
-	const { idProduct, titleProduct, imageProduct, priceProduct, amount } = product;
+	const { idProduct, titleProduct, imageProduct, priceTotal, amount } = product;
 
 	const $itemProduct = document.createElement('div');
 	$itemProduct.classList.add('modal-item');
@@ -27,7 +27,7 @@ const ItemProduct = (product) => {
 
 	const $priceProduct = document.createElement('span');
 	$priceProduct.classList.add('price_value')
-	$priceProduct.textContent = priceProduct;
+	$priceProduct.textContent = priceTotal;
 
 
 
