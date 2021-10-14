@@ -13,10 +13,12 @@ module.exports = {
 	resolve: {
 		extensions: ['.js'],
 		alias: {
-      'styles': path.resolve(__dirname, 'src/styles'),
-      'components': path.resolve(__dirname, 'src/components'),
-      'utils': path.resolve(__dirname, 'src/utils'),
-      'images': path.resolve(__dirname, 'public/assets/'),
+      'styles': path.resolve(__dirname, 'src/resources/'),
+      'images': path.resolve(__dirname, 'src/resources/images/'),
+      'components': path.resolve(__dirname, 'src/main/components/'),
+      'utils': path.resolve(__dirname, 'src/main/utils/'),
+      'data': path.resolve(__dirname, 'src/main/data/'),
+      'actions': path.resolve(__dirname, 'src/library/actions/'),
     },
 	},
 	module: {

@@ -66,8 +66,14 @@
 		font-weight: bold;
 	}
 }
+#btn-modal.hidden{
+	display: none;
+}
 .btn-modal-secondary {
 	padding: 10px 20px;
 	font-size: 16px;
 	color: rgb(184, 180, 180);
+}
+.btn-modal-secondary.hidden {
+	display: none;
 }

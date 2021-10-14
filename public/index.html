@@ -20,41 +20,13 @@
 					<button class="btn-transition close_btn close-modal"></button>
 				</div>
 				<div class="modal-body">
-					<div class="modal-item">
-						<div class="modal-item-info">
-							<img
-								src="https://agroactivocol.com/wp-content/uploads/2020/07/Tomate-Lancero.jpg"
-								alt="Nombre del producto"
-								title="Nombre del producto"
-							/>
-							<div class="modal-item-info-text">
-								<p>Nombre del articulo</p>
-								<p class="price">
-									Precio: $
-									<span class="price_value">100</span>
-								</p>
-							</div>
-						</div>
-						<div class="modal-item-quantity">
-							<button class="btn-transition minus">
-								<img src="./assets/minus.svg" alt="Agregar product" />
-							</button>
-							<p class="quantity">
-								100
-								<span class="quantity_">und</span>
-							</p>
-							<button class="btn-transition plus">
-								<img src="./assets/plus.svg" alt="Agregar producto" />
-							</button>
-						</div>
-					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn-transition btn-modal-secondary btn">Vaciar canasta</button>
-					<button class="btn-transition btn-modal btn">
-						<span class="amount">3</span>
+					<button id="btn_empty" class="btn-transition btn-modal-secondary btn">Vaciar Carrito</button>
+					<button id="btn-modal"class="btn-transition btn-modal btn">
+						<span id="amount" class="amount"></span>
 						Ir a Pagar
-						<span class="total_price">1000</span>
+						<span id="total_price" class="total_price"></span>
 					</button>
 				</div>
 			</div>
@@ -106,7 +78,7 @@
 				<div class="Text-cover">
 					<p class="sub-title">Compra Aquí</p>
 					<img
-						src="./assets/south.svg"
+						src="../src/resources/images/south.svg"
 						alt="Flecha que apunta hacia abajo"
 						title="Flecha que apunta hacia abajo"
 					/>
@@ -125,29 +97,7 @@
 			<div class="wrapper">
 				<div class="main__container">
 					<!-- Card of product -->
-					<div class="cards-products">
-						<div class="card-product">
-							<img
-								src="https://agroactivocol.com/wp-content/uploads/2020/07/Tomate-Lancero.jpg"
-								alt="Nombre del producto"
-								title="Nombre del producto"
-							/>
-							<div class="card-product__info">
-								<div class="container-product-info">
-									<h2 class="card-product__title">Tomate</h2>
-									<p class="card-product__price">
-										<span>$</span>
-										<span>100</span>
-									</p>
-								</div>
-								<p class="card-product__description">
-									Un rico tomate traido desde los cielos para ti.
-								</p>
-								<button class="btn btn-secondary" title="Agregar al carrito">
-									Agregar al carrito
-								</button>
-							</div>
-						</div>
+					<div id="cards-products"class="cards-products">
 					</div>
 				</div>
 			</div>
