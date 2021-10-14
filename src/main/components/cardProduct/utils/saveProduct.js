@@ -4,7 +4,7 @@ export default (product) => {
 	const data = {
 		...product,
 		amount: 1,
-		priceTotal:product.priceProduct
+		priceTotal:parseInt(product.priceProduct)
 	};
 	const collectionExists = JSON.parse(getCollection('PRODUCTS'))
 	if (collectionExists) {

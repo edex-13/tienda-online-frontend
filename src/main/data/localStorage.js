@@ -52,7 +52,7 @@ const updatePriceOfAProduct=(id)=>{
 		const products = JSON.parse(getCollection('PRODUCTS'))
 		products.map(product => {
 			if (product.idProduct == id) {
-				product.priceTotal = product.amount * product.priceProduct;
+				product.priceTotal = product.amount * parseInt(product.priceProduct);
 			}
 		})
 		saveProduct( products);

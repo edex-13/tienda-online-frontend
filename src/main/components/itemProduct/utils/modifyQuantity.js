@@ -1,4 +1,6 @@
 import { increaseQuantity ,decreaseQuantity , updatePriceOfAProduct} from 'data/localStorage';
+import updateTotalPrice from 'components/shoppinCart/utils/updateTotalPrice';
+
 import updateCarContent from 'components/shoppinCart/utils/cartContent';
 const modifyQuantity = ({target}) => {
 	const isAQuantitButton = target.tagName == 'BUTTON' && target.classList.contains('btn-transition');
@@ -17,6 +19,7 @@ const modifyQuantity = ({target}) => {
     }
 		updatePriceOfAProduct(idProduct)
 		updateCarContent()
+		updateTotalPrice()
 	}
 };
 

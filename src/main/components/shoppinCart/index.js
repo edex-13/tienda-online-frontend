@@ -2,6 +2,7 @@ import {openModal,closeModal} from'actions/openModal';
 import updateCarContent from './utils/cartContent';
 import emptyCart from './utils/empty';
 import updateAmount from './utils/updateAmount';
+import updateTotalPrice from './utils/updateTotalPrice';
 import modifyQuantity from 'components/itemProduct/utils/modifyQuantity';
 
 const $btn_activeModal = document.querySelector('#openModal');
@@ -13,6 +14,7 @@ $btn_activeModal.addEventListener('click', () => {
 	openModal()
   updateCarContent()
   updateAmount()
+  updateTotalPrice()
 });
 
 $btn_closeModal.addEventListener('click', () => {
