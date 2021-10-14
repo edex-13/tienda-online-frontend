@@ -38,7 +38,7 @@ const decreaseQuantity = (id) => {
 		const products = JSON.parse(getCollection('PRODUCTS'))
 		products.map(product => {
 			if (product.idProduct == id) {
-				product.amount == 0 ? 0 : product.amount - 1;
+				product.amount = product.amount <= 1 ? 1 : product.amount - 1;
 			}
 		})
 		saveProduct( products);
