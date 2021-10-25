@@ -4,7 +4,12 @@ import CardProduct from 'components/cardProduct/CardProduct';
 
 const routes = async (route) => {
 	const products = await getData(route.search);
-  return products
+  const nodeProducts = []
+  products.forEach(product => {
+    const node = CardProduct(product)
+    nodeProducts.push(node)
+  });
+  return nodeProducts
 }
 
 export default routes;
