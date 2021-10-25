@@ -8,12 +8,10 @@ import routes from 'routes/index';
 import paramsQuery from 'routes/paramsQuery';
 
 
-const $container = document.querySelector('#cards-products');
 const $searchInputs = [...document.querySelectorAll('.search_btn')]
 
 window.addEventListener('load', async(event) => {
-	const nodeProducts =await routes(location)
-	$container.append(...nodeProducts)
+	await routes(location)
 });
 
 $searchInputs.forEach(searchInput =>{
