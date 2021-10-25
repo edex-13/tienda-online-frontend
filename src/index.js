@@ -4,6 +4,8 @@ import 'components/cardProduct/utils/addToCart';
 
 import 'components/shoppinCart/index';
 
+import routres from 'routes/index';
+
 import CardProduct from 'components/cardProduct/CardProduct';
 
 const dsjd = document.querySelector('#cards-products');
@@ -24,3 +26,7 @@ dsjd.append(
 		price: 100,
 	})
 );
+
+window.addEventListener('load', (event) => {
+	routres(location)
+});
